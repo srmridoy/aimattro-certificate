@@ -65,7 +65,7 @@ export default function ParticipantsPage({ _participants }) {
         </Container>
       </Box>
 
-      <Container sx={{ my: 10 }} maxWidth="lg">
+      <Container sx={{ my: 10 }} maxWidth="md">
         <Typography variant="subtitle2" align="center">Find your name and click on “View Certificate”</Typography>
         <Box
           sx={{
