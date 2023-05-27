@@ -48,13 +48,13 @@ export default function ParticipantsPage({ _participants }) {
   };
 
   const handleDownloadPDF = () => {
-    const pdfUrl = `/download/${participant.id}.pdf`;
+    const pdfUrl = `https://www.aimattro.com/download/${participant.id}.pdf`;
     const filename = pdfUrl.substring(pdfUrl.lastIndexOf('/') + 1);
     saveAs(pdfUrl, filename);
   };
 
   const handleDownloadImage = () => {
-    const imageUrl = `/download/${participant.id}.jpg`;
+    const imageUrl = `https://www.aimattro.com/download/${participant.id}.jpg`;
     const filename = imageUrl.substring(imageUrl.lastIndexOf('/') + 1);
     saveAs(imageUrl, filename);
   };
@@ -81,7 +81,7 @@ export default function ParticipantsPage({ _participants }) {
       <Head>
         <title> Certificate of {participant.name} </title>
         <meta property="og:title" content={`Certificate of ${participant.name}`} />
-        <meta property="og:image" content={`https://certificate.aimattro.com/download/${participant.id}.jpg`} />
+        <meta property="og:image" content={`https://www.aimattro.com/download/${participant.id}.jpg`} />
         <meta property="og:type" content="website" />
       </Head>
 
@@ -116,7 +116,7 @@ export default function ParticipantsPage({ _participants }) {
 
       <Container sx={{ my: 10, textAlign: 'center' }} maxWidth="lg">
         <Image 
-          src={`/download/${participant.id}.jpg`} 
+          src={`https://www.aimattro.com/download/${participant.id}.jpg`} 
           sx={{ 
             borderWidth: (theme) => theme.spacing(0.5),
             borderStyle: 'solid',
