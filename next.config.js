@@ -1,5 +1,4 @@
 module.exports = {
-  basePath: '/certificate',
   swcMinify: false,
   trailingSlash: true,
   env: {

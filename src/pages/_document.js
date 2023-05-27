@@ -17,15 +17,15 @@ export default class MyDocument extends Document {
       <Html lang="en" className={primaryFont.className}>
         <Head>
           <meta charSet="utf-8" />
-          <link rel="manifest" href="/certificate/manifest.json" />
+          <link rel="manifest" href="/manifest.json" />
 
           {/* PWA primary color */}
           <meta name="theme-color" content={palette('light').primary.main} />
 
           {/* Favicon */}
-          <link rel="apple-touch-icon" sizes="180x180" href="/certificate/favicon/apple-touch-icon.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/certificate/favicon/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/certificate/favicon/favicon-16x16.png" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
 
           {/* Emotion */}
           <meta name="emotion-insertion-point" content="" />

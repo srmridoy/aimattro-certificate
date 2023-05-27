@@ -57,13 +57,13 @@ export default function ParticipantsPage({ _participants }) {
   };
 
   const handleDownloadPDF = () => {
-    const pdfUrl = `/certificate/download/${participant.id}.pdf`;
+    const pdfUrl = `/download/${participant.id}.pdf`;
     const filename = pdfUrl.substring(pdfUrl.lastIndexOf('/') + 1);
     saveAs(pdfUrl, filename);
   };
 
   const handleDownloadImage = () => {
-    const imageUrl = `/certificate/download/${participant.id}.jpg`;
+    const imageUrl = `/download/${participant.id}.jpg`;
     const filename = imageUrl.substring(imageUrl.lastIndexOf('/') + 1);
     saveAs(imageUrl, filename);
   };
@@ -95,7 +95,7 @@ export default function ParticipantsPage({ _participants }) {
         <title> Certificate of {participant.name} </title>
         <meta property="og:title" content={`Certificate of ${participant.name}`} />
         <meta property="og:url" content={window.location.href} />
-        <meta property="og:image" content={`https://www.aimattro.com/certificate/download/${participant.id}.jpg`} />
+        <meta property="og:image" content={`https://www.aimattro.com/download/${participant.id}.jpg`} />
         <meta property="og:type" content="website" />
       </Head>
 
@@ -130,7 +130,7 @@ export default function ParticipantsPage({ _participants }) {
 
       <Container sx={{ my: 10, textAlign: 'center' }} maxWidth="lg">
         <Image 
-          src={`/certificate/download/${participant.id}.jpg`} 
+          src={`/download/${participant.id}.jpg`} 
           sx={{ 
             borderWidth: (theme) => theme.spacing(0.5),
             borderStyle: 'solid',
@@ -169,7 +169,7 @@ export default function ParticipantsPage({ _participants }) {
 
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch(`https://www.aimattro.com/certificate/data.json`);
+  const res = await fetch(`https://www.aimattro.com/data.json`);
   const _participants = await res.json();
  
   // Pass data to the page via props

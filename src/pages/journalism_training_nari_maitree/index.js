@@ -120,7 +120,7 @@ export default function ParticipantsPage({ _participants }) {
 
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch(`https://www.aimattro.com/certificate/data.json`);
+  const res = await fetch(`https://www.aimattro.com/data.json`);
   const _participants = await res.json();
  
   // Pass data to the page via props
