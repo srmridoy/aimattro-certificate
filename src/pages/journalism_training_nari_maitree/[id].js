@@ -81,8 +81,7 @@ export default function ParticipantsPage({ _participants }) {
       <Head>
         <title> Certificate of {participant.name} </title>
         <meta property="og:title" content={`Certificate of ${participant.name}`} />
-        <meta property="og:url" content={window.location.href} />
-        <meta property="og:image" content={`https://www.aimattro.com/download/${participant.id}.jpg`} />
+        <meta property="og:image" content={`https://certificate.aimattro.com/download/${participant.id}.jpg`} />
         <meta property="og:type" content="website" />
       </Head>
 
