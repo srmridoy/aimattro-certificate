@@ -86,7 +86,7 @@ export default function ParticipantsPage({ _participants }) {
                     <CustomAvatar key="default" color="default" sx={{ width: 48, height: 48 }}>
                       <Iconify icon="carbon:ibm-cloud-for-education" width={24} />
                     </CustomAvatar>
-                    <Typography variant="subtitle1">{participant.name} ({participant.age})</Typography>
+                    <Typography variant="subtitle1">{participant.name}</Typography>
                   </Stack>
                   <Stack direction="row" alignItems="center" spacing={1}>
                     {
