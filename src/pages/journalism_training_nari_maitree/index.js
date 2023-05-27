@@ -93,17 +93,9 @@ export default function ParticipantsPage({ _participants }) {
                       isMobile &&
                       <Iconify icon="mdi:phone" width={24} sx={{ color: 'primary.main' }} />
                     }
-                    <Typography variant="body1">0174****9156</Typography>
-                  </Stack>
-                  <Stack direction="row" alignItems="center" spacing={1}>
-                    <Iconify icon="mdi:calendar-range" width={24} sx={{ color: 'primary.main' }} />
-                    <Typography variant="body1">{fDate(participant.dob)}</Typography>
+                    <Typography variant="body1">{`${participant.mobile.slice(0, 3)}****${participant.mobile.slice(-4)}`}</Typography>
                   </Stack>
 
-                  <Stack direction="row" alignItems="center" spacing={1}>
-                    <Iconify icon="mdi:education-outline" width={24} sx={{ color: 'primary.main' }} />
-                    <Typography variant="body1">{participant.education}</Typography>
-                  </Stack>
                   <Fab variant="extended" onClick={() => push(`/journalism_training_nari_maitree/${participant.id}`)}>
                     <Iconify icon="mdi:certificate-outline" width={24} />
                     View Certificate
