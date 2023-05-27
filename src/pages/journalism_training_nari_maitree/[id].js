@@ -33,15 +33,6 @@ export default function ParticipantsPage({ _participants }) {
   const { replace, query } = useRouter();
   const { enqueueSnackbar } = useSnackbar();
   const isMobile = useResponsive('down', 'md');
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (_participants.filter(participant => participant.id === query.id).length < 1) {
-      replace('/404');
-    } else {
-      setLoading(false);
-    }
-  }, [_participants, replace, query.id]);
 
   const participant = _participants.filter(p => p.id === query.id)[0];
 
@@ -84,10 +75,6 @@ export default function ParticipantsPage({ _participants }) {
   const handleShareLinkedIn = () => {
     window.open(`https://www.linkedin.com/shareArticle?url=${window.location.href}`);
   };
-
-  if (loading) {
-    return <LoadingScreen />
-  }
 
   return (
     <>
@@ -167,10 +154,15 @@ export default function ParticipantsPage({ _participants }) {
   );
 }
 
-export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch(`https://www.aimattro.com/data.json`);
+export async function getServerSideProps(context) {
+  const res = await fetch(`https://www.aimattro.com/certificate/data.json`);
   const _participants = await res.json();
+
+  if(_participants.filter(participant => participant.id === context.query.id).length < 1) {
+    return {
+      notFound: true,
+    }
+  }
  
   // Pass data to the page via props
   return { props: { _participants } };
