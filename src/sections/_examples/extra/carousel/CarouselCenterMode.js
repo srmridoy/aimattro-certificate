@@ -122,6 +122,7 @@ function CarouselItem({ item }) {
           variant="overline"
           sx={{
             opacity: 0.72,
+            fontSize: '1rem',
             alignItems: 'center',
             display: 'inline-flex',
             transition: theme.transitions.create('opacity'),
