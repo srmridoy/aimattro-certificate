@@ -51,7 +51,7 @@ export default function HomePage() {
               },
               {
                 name: 'Certificate',
-                href: '/',
+                href: '/journalism_training_nari_maitree',
               },
               { name: 'Training Programs' },
             ]}
