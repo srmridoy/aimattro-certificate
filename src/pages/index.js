@@ -51,7 +51,7 @@ export default function HomePage() {
               },
               {
                 name: 'Certificate',
-                href: 'https://www.aimattro.com/certificate',
+                href: '/',
               },
               { name: 'Training Programs' },
             ]}
